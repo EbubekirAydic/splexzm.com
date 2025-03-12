@@ -1,0 +1,387 @@
+/* Genel stil */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+/* For Webkit browsers */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #780278;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #6b1e60;
+    border-radius: 10px;
+    border: 3px solid #8d00a0;
+}
+
+/* Resimler */
+img {
+    width: 70%;
+    transition: width 0.5s;
+}
+
+img:hover {
+    width: 71%;
+}
+
+header{
+    padding: 20px 0px 20px 0px;
+    height: auto;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #530348, #2d0146);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+header img{
+    width: 35vh;
+    transition: width 0.5s;
+}
+header img:hover{
+    width: 36vh;
+}
+
+/*
+a {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+a:hover {
+    background-color: #218838;
+} */
+
+
+/* Ana div */
+#AnaDiv {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: linear-gradient(135deg, #3e0340, #370235); /* Koyu temalı Pembe-Mor ile Turuncu Geçişi */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+    color: whitesmoke;
+    font-family: 'MinecraftTR', sans-serif;
+}
+
+/* Merkezdeki içerik */
+#center {
+    margin: 0px;
+    width: 100%;
+}
+
+/* Büyük texture resmi */
+#szmPackImg {
+    border: 5px solid #2f1838;
+    box-shadow: 5px 8px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    transition: width 0.5s;
+}
+
+#szmPackImg:hover {
+    width: 73%;
+}
+
+/* Üst kısım */
+#AnaDiv #top {
+    background-color: #59044b;
+}
+
+/* İndirme alanı */
+#downloadDiv {
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#downloadTop {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+/* Kalite ve Performans butonları */
+#Quality,
+#Performance{
+    width : 100%;
+}
+
+#Quality a,
+#Performance a {
+    font-weight: bold;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: white;
+    text-shadow: 2px 3px 1px rgba(0, 0, 0, 0.448) !important;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#Quality a:hover,
+#Performance a:hover {
+    background-color: #0056b3;
+    transform: scale(1.02);
+}
+
+/* Tablo tasarımı *//* Tablo Genel Stili */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.1); /* Hafif saydam arka plan */
+    border-radius: 10px; /* Köşeleri yuvarla */
+    overflow: hidden; /* Taşmaları önle */
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3); /* Hafif gölge efekti */
+}
+
+/* Tablo Başlık Stili */
+th {
+    background: linear-gradient(135deg, #3a0d5a, #6b1e60); /* Koyu mor-pembe geçiş */
+    color: #fff;
+    padding: 12px;
+    font-size: 16px;
+    text-align: left;
+}
+
+.solTd{
+    background: linear-gradient(135deg, #25063b, #720762); /* Koyu mor-pembe geçiş */
+    color: #fff;
+    padding: 12px;
+    font-size: 16px;
+    text-align: left;
+}
+
+/* Tablo Hücreleri */
+td {
+    padding: 10px;
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* İnce alt çizgi */
+}
+
+
+
+/* Sol Tarafta Duvar Çizgisi */
+td:first-child, th:first-child {
+    border-left: 4px solid #ff007f; /* Sol tarafa parlak çizgi */
+    padding-left: 15px;
+}
+
+/* Alternatif Satır Renkleri */
+tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Hover Efekti */
+tr:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transition: 0.3s;
+}
+
+
+.R{
+    color: #bd0f0f;
+}
+
+.G{
+    color: #0fbd29;
+}
+
+
+* {box-sizing: border-box}
+.mySlides {
+    display: none;
+    background-color: transparent;
+    overflow: hidden;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 6px 10px 5px rgba(0, 0, 0, 0.3);
+}
+.mySlides img {
+    vertical-align: middle;
+    border-radius: 20px;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  text-align: left;
+  background-color: transparent;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 6px 6px 0;
+  user-select: none;
+  background-color: #2f183866;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 6px 0 0 6px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(52, 0, 52, 0.69);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #383838;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+#PngOutDoor{
+    padding: 0px 20px 0px 20px;
+    text-shadow: 2px 5px 1px rgb(0, 0, 0);
+}
+
+#TextureOzellik{
+    text-align: left;
+    color: #f4f4f4;
+}
+
+#TextureAciklama{
+    text-align: left;
+    line-height: 25px;
+    color: #f4f4f4;
+}
+
+
+
+/* Responsive (Mobil) */
+@media screen and (max-width: 769px) {
+    #center {
+        margin: 0px;
+    }
+
+    #downloadTop {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    #Quality a,
+    #Performance a {
+        display: block;
+        text-align: center;
+    }
+}
+
+/* Responsive (Mobil) */
+@media screen and (max-width: 970px) {
+    .mySlides img {
+        height: calc(100vw * 0.5625); /* 16:9 aspect ratio */
+    }
+}
+
+/* Responsive (Mobil) */
+@media screen and (min-width: 970px) {
+    #center {
+        margin: 0px;
+        width: 100%;
+        display: flex;
+    }
+    .slideshow-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%; /* Ekran genişliğini baz al */
+        position: relative;
+        margin: auto;
+        overflow: hidden;
+    }
+    
+    .mySlides {
+        display: none;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .mySlides img {
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+        object-fit: contain; /* Fotoğrafı çerçeveye göre sığdır */
+    }
+    
+}

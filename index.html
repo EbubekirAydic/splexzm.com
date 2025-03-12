@@ -4,57 +4,114 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minecraft Texture Pack Wiki</title>
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/fonts.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.cdnfonts.com/css/minecraft-3" rel="stylesheet">
 </head>
 <body>
     <div id="AnaDiv">
-        <div id="top"></div>
+        <header style="width: 100%;">
+            <img src="assets/images/Splexzm_pack.png" alt="szmPack">
+        </header>
 
         <div id="center">
-            <img src="assets/images/minecraft.png" alt="szmPack">
-            <img id="szmPackImg" src="/assets/images/SzmTexture.png" alt="SzmTextureImg">
+                    
+            <div class="slideshow-container">
 
-            <p style="font-size: 2rem;"><b>Versiyon:</b> 1.21.4</p>
-            <p>Bu texture pack, Minecraft oyununu daha gerçekçi hale getirir. İçerisinde HD bloklar ve yeni efektler bulunmaktadır.</p>
-            
-            <div id="downloadDiv">
-                <div id="downloadTop">
-                    <div id="Quality">
-                        <a href="texture_pack/packQ.zip" download>📥 Kaliteli Sürüm</a>
-                    </div>
-                    <div id="Performance">
-                        <a href="texture_pack/packP.zip" download>⚡ Performans Sürümü</a>
-                    </div>
+                <div class="mySlides fade">
+                <div class="numbertext">1 / 4</div>
+                <img src="assets/images/SzmTexture.png" style="width:100%">
                 </div>
-                <div id="Kiyaslama">
-                    <table>
-                        <tr>
-                            <th>Özellik</th>
-                            <th>Kalite Sürümü</th>
-                            <th>Performans Sürümü</th>
-                        </tr>
-                        <tr>
-                            <td class="solTd">Blok Dokuları</td>
-                            <td class="G">3D</td>
-                            <td class="R">Klasik</td>
-                        </tr>
-                        <tr>
-                            <td class="solTd">Mb</td>
-                            <td class="R">30mb</td>
-                            <td class="G">20mb</td>
-                        </tr>
-                        <tr>
-                            <td class="solTd">FPS Performansı</td>
-                            <td class="R">Düşük (Güçlü PC)</td>
-                            <td class="G">Yüksek (Zayıf PC)</td>
-                        </tr>
-                    </table>                
+                
+                <div class="mySlides fade">
+                <div class="numbertext">2 / 4</div>
+                <img src="assets/images/2025-03-12_16.52.55.png" style="width:100%">
+                </div>
+                
+                <div class="mySlides fade">
+                <div class="numbertext">3 / 4</div>
+                <img src="assets/images/2025-03-12_16.51.52.png" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                <div class="numbertext">4 / 4</div>
+                <img src="assets/images/2025-03-12_16.52.20.png" style="width:100%">
+                </div>
+                
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+                
+            <br>
+
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span> 
+                    <span class="dot" onclick="currentSlide(2)"></span> 
+                    <span class="dot" onclick="currentSlide(3)"></span> 
+                    <span class="dot" onclick="currentSlide(4)"></span> 
+                </div>
+            </div>
+            
+    
+            <div id="PngOutDoor">
+                    
+                <div id="TextureOzellik">
+                    <h1 style="font-size: 2rem;"><b>Texture pack özellikleri :</b></h1>
+                    <p style="font-size: 20px;">- <b>Versiyon:</b> 1.21.4</p>
+                    <p style="font-size: 20px;">- Toplama texturePack</p>
+                </div>
+                <br>
+                <div id="TextureAciklama">
+                    <h1 style="font-size: 2rem;"><b>Texture pack Hakkında :</b></h1>
+                    <p>Bu texture pack, Minecraft oyununu daha gerçekçi hale getirir. içerisinde HD bloklar ve yeni efektler bulunmaktadır.</p>
+                </div>
+
+                <div id="downloadDiv">
+                    <div id="downloadTop">
+                    </div>
+                    <div id="Kiyaslama">
+                        <table>
+                            <tr>
+                                <th>Özellik</th>
+                                <th>Kalite Sürümü</th>
+                                <th>Performans Sürümü</th>
+                            </tr>
+                            <tr>
+                                <th>indirmek :</th>
+                                <th style="text-align: center;">
+                                    <div id="Quality">
+                                        <a href="texture_pack/SplexzmPack_Quality.zip" download>indir</a>
+                                    </div>
+                                </th>
+                                <th style="text-align: center;">
+                                    <div id="Performance">
+                                        <a href="texture_pack/packP.zip" download>indir</a>
+                                    </div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td class="solTd">Blok Dokuları</td>
+                                <td class="G">3D</td>
+                                <td class="R">Klasik</td>
+                            </tr>
+                            <tr>
+                                <td class="solTd">Mb</td>
+                                <td class="R">18,9 MB</td>
+                                <td class="G">20mb</td>
+                            </tr>
+                            <tr>
+                                <td class="solTd">FPS Performansı</td>
+                                <td class="R">Düşük (Güçlü PC)</td>
+                                <td class="G">Yüksek (Zayıf PC)</td>
+                            </tr>
+                        </table>                
+                    </div>
                 </div>
             </div>
         </div>
         
         <div id="bottom"></div>
     </div>
+
+    <script src="assets/JavaScript/script.js"></script>
 </body>
 </html>
