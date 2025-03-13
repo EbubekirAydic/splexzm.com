@@ -7,7 +7,8 @@ body {
 
 /* For Webkit browsers */
 ::-webkit-scrollbar {
-    width: 12px;
+    width: 8px;
+    height: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -147,8 +148,11 @@ table {
     margin-top: 20px;
     background: rgba(255, 255, 255, 0.1); /* Hafif saydam arka plan */
     border-radius: 10px; /* Köşeleri yuvarla */
-    overflow: hidden; /* Taşmaları önle */
+    display: block;
+    overflow-y: hidden; /* Taşmaları önle */
+    overflow-x: scroll; /* Taşmaları önle */
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3); /* Hafif gölge efekti */
+
 }
 
 /* Tablo Başlık Stili */
@@ -384,4 +388,35 @@ tr:hover {
         object-fit: contain; /* Fotoğrafı çerçeveye göre sığdır */
     }
     
+}
+
+@media screen and (max-width: 510px) {
+    /* Tablo Başlık Stili */
+    th {
+        font-size: 12px;
+    }
+
+    td{
+        font-size: 12px;
+    }
+    
+    .solTd{
+        font-size: 10px;
+    }
+    .prev, .next {
+      font-size: 12px;
+    }
+    .text {
+      font-size: 10px;
+    }
+    .numbertext {
+      font-size: 8px;
+    }
+
+    h1{
+        font-size: 24px  !important;
+    }
+    p{
+        font-size: 15px  !important;
+    }
 }
