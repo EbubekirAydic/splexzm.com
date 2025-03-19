@@ -10,7 +10,7 @@ body {
     position: absolute;
     width: 100vw;
     height: 120vh;
-    background: url('https://media.discordapp.net/attachments/1349074603858726974/1349745438152065107/2024-10-17_21.54.09.png?ex=67d437e5&is=67d2e665&hm=7343023bb9b6d7e62d6da9257cb54a0f587c44c3bc00ed018c6cafc5399a91be&=&format=webp&quality=lossless&width=1401&height=788') center/cover no-repeat;
+    background: url('../images/2024-10-17_21.54.09.png') center/cover no-repeat;
     z-index: -1;
     background-color: #000;
 }
