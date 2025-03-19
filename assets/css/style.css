@@ -1,9 +1,35 @@
-/* Genel stil */
 body {
-    font-family: Arial, sans-serif;
     text-align: center;
-    background-color: #f4f4f4;
+    background: linear-gradient(266deg, #38003c, #572e55);
+    overflow-x: hidden;
 }
+
+
+
+.background {
+    position: absolute;
+    width: 100vw;
+    height: 120vh;
+    background: url('https://media.discordapp.net/attachments/1349074603858726974/1349745438152065107/2024-10-17_21.54.09.png?ex=67d437e5&is=67d2e665&hm=7343023bb9b6d7e62d6da9257cb54a0f587c44c3bc00ed018c6cafc5399a91be&=&format=webp&quality=lossless&width=1401&height=788') center/cover no-repeat;
+    z-index: -1;
+    background-color: #000;
+}
+.background2 {
+    position: absolute;
+    width: 120vw;
+    height: 120vh;
+    background: url('https://media.discordapp.net/attachments/1349074603858726974/1349745438152065107/2024-10-17_21.54.09.png?ex=67d437e5&is=67d2e665&hm=7343023bb9b6d7e62d6da9257cb54a0f587c44c3bc00ed018c6cafc5399a91be&=&format=webp&quality=lossless&width=1401&height=788') center/cover no-repeat;
+    opacity: 0.7;
+    background-color: rgb(37, 37, 37);
+}
+
+.hero-mask {
+    --mask: conic-gradient(from -75deg at bottom, #ff0000, #ff0000 1deg 149deg, #ff000000 150deg) 50% / 50px 100%;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
 
 /* For Webkit browsers */
 ::-webkit-scrollbar {
@@ -23,14 +49,6 @@ body {
 }
 
 /* Resimler */
-img {
-    width: 70%;
-    transition: width 0.5s;
-}
-
-img:hover {
-    width: 71%;
-}
 
 header{
     padding: 20px 0px 20px 0px;
@@ -62,19 +80,18 @@ a:hover {
     background-color: #218838;
 } */
 
+a{
+    color: #166fff;
+    text-decoration: none;
+}
 
 /* Ana div */
 #AnaDiv {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    background: linear-gradient(135deg, #3e0340, #370235); /* Koyu temalı Pembe-Mor ile Turuncu Geçişi */
+    background: linear-gradient(135deg, #3e034000, #37023500);
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow: auto;
+    overflow-x: hidden;
     color: whitesmoke;
     font-family: 'MinecraftTR', sans-serif;
 }
@@ -129,15 +146,15 @@ a:hover {
     display: inline-block;
     padding: 10px 20px;
     border-radius: 8px;
-    background-color: #007bff;
+    background: linear-gradient(135deg, #056eb8, #07721c); /* Koyu mor-pembe geçiş */
     color: white;
     text-shadow: 2px 3px 1px rgba(0, 0, 0, 0.448) !important;
-    transition: background-color 0.3s, transform 0.2s;
+    transition: background-color 0.3s, transform 0.2s, background-size 1s ease-in-out;
 }
 
 #Quality a:hover,
 #Performance a:hover {
-    background-color: #0056b3;
+    background: linear-gradient(135deg, #05b829, #077072); /* Koyu mor-pembe geçiş */
     transform: scale(1.02);
 }
 
@@ -152,11 +169,11 @@ table {
     overflow-y: hidden; /* Taşmaları önle */
     overflow-x: scroll; /* Taşmaları önle */
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3); /* Hafif gölge efekti */
-
 }
 
 /* Tablo Başlık Stili */
 th {
+    width: 50%;
     background: linear-gradient(135deg, #3a0d5a, #6b1e60); /* Koyu mor-pembe geçiş */
     color: #fff;
     padding: 12px;
@@ -174,15 +191,18 @@ th {
 
 /* Tablo Hücreleri */
 td {
+    text-shadow: 2px 2px 1px rgb(0, 0, 0);
     padding: 10px;
     color: #fff;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* İnce alt çizgi */
+    background: linear-gradient(135deg, #4b037e, #bd37a9); /* Koyu mor-pembe geçiş */
 }
 
 
 
 /* Sol Tarafta Duvar Çizgisi */
 td:first-child, th:first-child {
+    width: auto;
     border-left: 4px solid #ff007f; /* Sol tarafa parlak çizgi */
     padding-left: 15px;
 }
@@ -298,9 +318,10 @@ tr:hover {
 }
 
 /* Fading animation */
-.fade {
+.fadee {
   animation-name: fade;
   animation-duration: 1.5s;
+  opacity: 1;
 }
 
 @keyframes fade {
@@ -368,7 +389,8 @@ tr:hover {
         flex-direction: column;
         width: 100%; /* Ekran genişliğini baz al */
         position: relative;
-        margin: auto;
+        margin: 0;
+        margin-bottom: auto;
         overflow: hidden;
     }
     
@@ -419,4 +441,76 @@ tr:hover {
     p{
         font-size: 15px  !important;
     }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Resim kaydırmaca */
+
+* {box-sizing: border-box;}
+
+.img-comp-container {
+  position: relative;
+  height: 200px; /*should be the same height as the images*/
+}
+
+.img-comp-img {
+    position: absolute;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+}
+
+.img-comp-imgUst {
+    border-radius: 50px;
+    box-shadow: 5px 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+.img-comp-img img {
+  display:block;
+  vertical-align: middle;
+  border-radius: 50px;
+  border: 3px solid purple;
+}
+
+.img-comp-slider {
+  position: absolute;
+  z-index:9;
+  cursor: ew-resize;
+  /*set the appearance of the slider:*/
+  width: 40px;
+  height: 40px;
+  background-color: #2196F3;
+  opacity: 0.7;
+  border-radius: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.Yatay-Ortala{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Yatay{
+    width: 350px;
 }
