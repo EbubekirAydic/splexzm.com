@@ -1,1 +1,1 @@
-https://ebubekiraydic.github.io/splexzm.com/
+https://splexzm.com/
