@@ -31,13 +31,13 @@ function showSlides(n) {
 
 let slideInterval = setInterval(function() {
   plusSlides(1);
-}, 10000);
+}, 5000);
 
 function resetInterval() {
   clearInterval(slideInterval);
   slideInterval = setInterval(function() {
     plusSlides(1);
-  }, 10000);
+  }, 5000);
 }
 
 document.querySelectorAll('.prev, .next, .dot').forEach(element => {

@@ -10,7 +10,7 @@ body {
     position: absolute;
     width: 100vw;
     height: 120vh;
-    background: url('../images/2024-10-17_21.54.09.png') center/cover no-repeat;
+    background: url('../images/BackGroundImg.png') center/cover no-repeat;
     z-index: -1;
     background-color: #000;
 }
@@ -342,12 +342,18 @@ tr:hover {
 #TextureOzellik{
     text-align: left;
     color: #f4f4f4;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: #00000088;
 }
 
 #TextureAciklama{
     text-align: left;
     line-height: 25px;
     color: #f4f4f4;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: #00000088;
 }
 
 
@@ -513,4 +519,44 @@ tr:hover {
 
 .Yatay{
     width: 350px;
+}
+
+
+@media screen and (max-width: 670px) {
+    /* Tablo Başlık Stili */
+    th {
+        font-size: 12px;
+        padding: 5px 5px;
+        line-height: 20px;
+    }
+    th img{
+        width: 25px;
+    }
+    
+    /* Tablo Hücreleri */
+    td {
+        padding: 8px 5px;
+        font-size: 12px;
+    }
+    
+    .solTd{
+        font-size: 10px;
+        padding: 8px 5px;
+    }
+    .prev, .next {
+      font-size: 12px;
+    }
+    .text {
+      font-size: 10px;
+    }
+    .numbertext {
+      font-size: 8px;
+    }
+
+    h1{
+        font-size: 24px  !important;
+    }
+    p{
+        font-size: 15px  !important;
+    }
 }
