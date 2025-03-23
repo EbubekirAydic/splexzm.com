@@ -1,3 +1,17 @@
+let MenuAktif
+
+
+function menuOnOff() {
+  $('.menuBar').toggleClass('on');
+  $('.menuS').toggleClass('on');
+}
+
+
+
+
+
+
+
 let slideIndex = 1;
 showSlides(slideIndex);
 
