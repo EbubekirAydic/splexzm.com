@@ -320,7 +320,7 @@ tr:hover {
 /* Fading animation */
 .fadee {
   animation-name: fade;
-  animation-duration: 1.5s;
+  animation-duration: 0.2s;
   opacity: 1;
 }
 
@@ -339,12 +339,14 @@ tr:hover {
     text-shadow: 2px 5px 1px rgb(0, 0, 0);
 }
 
-#TextureOzellik{
+#TextureOzellik {
     text-align: left;
     color: #f4f4f4;
     padding: 15px;
-    border-radius: 15px;
-    background-color: #00000088;
+    width: 700px;
+    background-color: #00000088;    clip-path: path(
+        'M 0,55 Q 0,50 5,45 L 45,5 Q 50,0 55,0 L 645,0 Q 650,0 655,5 L 695,45 Q 700,50 700,55 L 700,305 Q 700,310 695,315 L 655,355 Q 650,360 645,360 L 55,360 Q 50,360 45,355 L 5,315 Q 0,310 0,305'
+        );
 }
 
 #TextureAciklama{
@@ -356,6 +358,12 @@ tr:hover {
     background-color: #00000088;
 }
 
+#ImgDiv{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-count: 3;
+}
 
 
 /* Responsive (Mobil) */
@@ -466,6 +474,9 @@ tr:hover {
 .img-comp-container {
   position: relative;
   height: 200px; /*should be the same height as the images*/
+  border-radius: 20px;
+  overflow: hidden;
+  border: 3px solid purple;
 }
 
 .img-comp-img {
@@ -476,15 +487,14 @@ tr:hover {
 }
 
 .img-comp-imgUst {
-    border-radius: 50px;
+    border-radius: 20px;
     box-shadow: 5px 6px 8px rgba(0, 0, 0, 0.3);
 }
 
 .img-comp-img img {
   display:block;
   vertical-align: middle;
-  border-radius: 50px;
-  border: 3px solid purple;
+  border-radius: 20px;
 }
 
 .img-comp-slider {
@@ -492,11 +502,12 @@ tr:hover {
   z-index:9;
   cursor: ew-resize;
   /*set the appearance of the slider:*/
-  width: 40px;
-  height: 40px;
-  background-color: #2196F3;
-  opacity: 0.7;
-  border-radius: 50%;
+  width: 3px;
+  height: 100%;
+  background-color: #d1d1d1;
+  opacity: 1;
+  justify-self: center;
+  align-self: center;
 }
 
 
@@ -560,3 +571,4 @@ tr:hover {
         font-size: 15px  !important;
     }
 }
+
