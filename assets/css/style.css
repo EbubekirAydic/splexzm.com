@@ -6,6 +6,8 @@ body {
 
 :root{
     --emojiWidth: 30px;
+    --w: 100vw; /* Dinamik genişlik */
+    --h: 50vh;  /* Dinamik yükseklik */
 }
 
 
@@ -67,21 +69,14 @@ header{
 
 header .left{
     text-align: left;
-}
-header .left a{
-    color: #d2d2d2;
-    margin: 5px;
-    text-decoration: underline;
-}
-header .left a:hover{
-    color: #e8e8e8;
+    display: flex;
+    align-items: center;
 }
 
 header .left img{
     cursor: pointer;
     height: auto;
     width: 8vh;
-    z-index: 999;
     transition: width 0.2s;
 }
 header .left img:hover{
@@ -141,13 +136,36 @@ header img:hover{
 .menuS img{
     width: var(--emojiWidth);
 }
-.menuS a{
-    color: #d2d2d2;
-    margin: 5px;
-    text-decoration: underline;
+.aStyle a{
+    margin-left: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #d7d7d7ad;
+    position: relative;
+    padding: 4px 0;
+    transition: color 0.2s;
 }
-.menuS a:hover{
-    color: #e8e8e8;
+.aStyle a:hover{
+    color: #fff;
+}
+.aStyle a::before{
+  content: "";
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: #fff;
+  transition: 0.5s transform ease;
+  transform: scale3d(0,1,1);
+  transform-origin: 0 50%;
+}
+.aStyle a:hover::before{
+  transform: scale3d(1,1,1);
+}
+.aStyle a::before{
+  transform-origin: 50% 50%;
+  background: #941385;
 }
 
 /*
@@ -427,11 +445,9 @@ tr:hover {
     text-align: left;
     color: #f4f4f4;
     padding: 15px;
-    width: 700px;
     background-color: #00000088;
-    clip-path: path(
-        'M 0,38 Q 0,30 5,22 L 22,5 Q 30,0 38,0 L 662,0 Q 670,0 678,5 L 695,22 Q 700,30 700,38 L 700,322 Q 700,330 695,338 L 678,355 Q 670,360 662,360 L 38,360 Q 30,360 22,355 L 5,338 Q 0,330 0,322'
-        );
+    position: relative; /* Gerekli olabilir */
+    display: block; /* Eğer çalışmıyorsa */
 }
 
 #TextureAciklama{
@@ -439,12 +455,9 @@ tr:hover {
     line-height: 25px;
     color: #f4f4f4;
     padding: 15px;
-    border-radius: 15px;
     background-color: #00000088;
-    width: 700px;
-    clip-path: path(
-        'M 0,38 Q 0,30 5,22 L 22,5 Q 30,0 38,0 L 662,0 Q 670,0 678,5 L 695,22 Q 700,30 700,38 L 700,322 Q 700,330 695,338 L 678,355 Q 670,360 662,360 L 38,360 Q 30,360 22,355 L 5,338 Q 0,330 0,322'
-        );
+    position: relative; /* Gerekli olabilir */
+    display: block; /* Eğer çalışmıyorsa */
 }
 
 #ImgDiv{
@@ -481,7 +494,7 @@ tr:hover {
 }
 
 /* Responsive (Mobil) */
-@media screen and (min-width: 1370px) {
+@media screen and (min-width: 970px) {
     #center {
         margin: 0px;
         width: auto;
@@ -623,20 +636,15 @@ tr:hover {
 
 @media screen and (max-width: 730px) {
     
-    #TextureOzellik{
-        width: auto;
-        clip-path: none;
-        border-radius: 10px;
-    }
-    #TextureAciklama{
-        width: auto;
-        clip-path: none;
-        border-radius: 10px;
-    }
 }
 
-@media screen and (max-width: 1370px) and (min-width: 670px) {
-
+.menuButtons{
+    width: fit-content;
+}
+@media screen and (max-width: 1000px) {
+    .menuButtons{
+        display: none;
+    }
 }
 
 @media screen and (max-width: 670px) {

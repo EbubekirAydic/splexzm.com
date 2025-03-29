@@ -1,14 +1,38 @@
 let MenuAktif
+let kutular = [
+  document.getElementById('TextureOzellik'),
+  document.getElementById('TextureAciklama')
+];
+
+
+
+function updateClipPath() {
+
+  kutular.forEach(kutu => {
+    
+
+  let w = kutu.clientWidth;  // Sayfa genişliği
+  let h = kutu.clientHeight; // Sayfa yüksekliği
+  
+  let pathValue = `M 0,${0.105 * h} Q 0,${0.083 * h} ${0.007 * w},${0.061 * h} L ${0.031 * w},${0.014 * h} Q ${0.043 * w},0 ${0.061 * w},0 L ${0.946 * w},0 Q ${0.957 * w},0 ${0.968 * w},${0.014 * h} L ${0.993 * w},${0.061 * h} Q ${w},${0.083 * h} ${w},${0.105 * h} L ${w},${0.894 * h} Q ${w},${0.916 * h} ${0.993 * w},${0.938 * h} L ${0.968 * w},${0.986 * h} Q ${0.957 * w},${h} ${0.946 * w},${h} L ${0.061 * w},${h} Q ${0.043 * w},${h} ${0.031 * w},${0.986 * h} L ${0.007 * w},${0.938 * h} Q 0,${0.916 * h} 0,${0.894 * h}`;
+  
+  kutu.style.clipPath = `path('${pathValue}')`;
+
+  });
+}
+
+// Sayfa boyutu değiştiğinde güncelle
+window.addEventListener("resize", updateClipPath);
+updateClipPath();
+
+
+
 
 
 function menuOnOff() {
   $('.menuBar').toggleClass('on');
   $('.menuS').toggleClass('on');
 }
-
-
-
-
 
 
 
