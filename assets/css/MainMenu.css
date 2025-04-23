@@ -1,0 +1,238 @@
+#menu1{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#iconMega{
+    cursor: pointer;
+    width: 20vh;
+    filter: drop-shadow(5px 5px 10px black);
+    animation: animete 5s ease-in-out forwards, animete2 5s linear infinite;
+}
+
+@keyframes animete {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    40% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    55% {
+        transform: translateY(15px);
+        opacity: 1;
+    }
+    65% {
+        transform: translateY(-5px);
+        opacity: 1;
+    }
+    75% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.greekMenu {
+    border-radius: 30px;
+    /* Alt ve üst paragrafın yazılarının arasındaki boşluk az olsun*/
+    line-height: 1;
+}
+.geeks {
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: 5px;
+
+    border-radius: 30px;
+    padding: 0px 35px 5px 15px;
+    z-index: 9;
+    /*dokununulamaz yap */
+    user-select: none; 
+}
+.geeks p {
+    background: 
+        url(../images/background4.png) center;
+    background-size: cover;
+    background-clip: text;
+    color: transparent;
+
+    filter: blur(200px);
+    transform: translateY(-200px);
+    
+    display: inline-block;
+    margin: 0;
+
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    z-index: 10;
+}
+.geeks p.gorundu{
+    animation: animate 5s ease-out forwards, animate2 1.5s linear infinite;
+
+}
+
+.geeks p:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.geeks p:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.geeks p:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.geeks p:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+.geeks p:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+.geeks p:nth-child(6) {
+    animation-delay: 1s;
+}
+
+.geeks p:nth-child(7) {
+    animation-delay: 1.2s;
+}
+.geeks p:nth-child(8) {
+    animation-delay: 1.4s;
+}
+
+@keyframes animate2 {
+    0%{
+        background-position-x: 0%
+    }
+    50%{
+        background-position-x: 100%
+    }
+    100%{
+        background-position-x: 0%
+    }
+}
+
+@keyframes animate {
+    0% {
+        opacity: 0;
+        filter: blur(5px);
+        transform: translateY(-200px);
+    }
+    15% {
+        filter: blur(5px);
+        transform: translateY(10px);
+    }
+    23% {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateY(0);
+    }
+}
+
+.menu1 .header {
+    margin: 15px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.menu1 .header h1:nth-child(1) {
+    padding: 5px 10px;
+    border-radius: .5rem;
+}
+
+.menu1 .header #animated-text {
+    padding: 5px 10px;
+    border-radius: .5rem;
+    color: black;
+    background-color: #67e8f9;
+    /*Burada width genişliği değişirse animasyonlu olsun*/
+    transition: width 0.5s ease-in-out;
+    /*taşan yazılar gözükmesin*/
+    overflow: hidden;
+    
+}
+  
+  .letter {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: letterIn 0.2s forwards;
+  }
+
+  .letter.out {
+    display: inline-block;
+    opacity: 1;
+    transform: translateY(0);
+    animation: letterOut 0.2s forwards;
+  }
+  
+  @keyframes letterIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+@keyframes letterOut {
+  to {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+}
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 670px) {
+    p{
+        font-size: 3rem;
+    }
+    #iconMega{
+        width: 17vh;
+    }
+}
+@media screen and (max-width: 450px) {
+    p{
+        font-size: 2rem  !important;
+    }
+    #iconMega{
+        width: 13vh !important;
+    }
+}
+
+
+
+

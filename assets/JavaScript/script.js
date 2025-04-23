@@ -8,6 +8,16 @@ let kutular = [
 
 function updateClipPath() {
 
+  if (kutular == null || kutular.length === 0) {
+    console.error("No elements found with the specified IDs.");
+    return;
+  }
+  for (let i = 0; i < kutular.length; i++) {
+    if (kutular[i] == null) {
+      console.log(`Element at index ${i} is null.`);
+      return;
+    }
+  }
   kutular.forEach(kutu => {
     
 
@@ -52,7 +62,7 @@ function showSlides(n) {
   let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("dot");
   if (slides.length === 0 || dots.length === 0) {
-    console.error("No slides or dots found.");
+    console.log("No slides or dots found.");
     return;
   }
   if (n > slides.length) {slideIndex = 1}    
@@ -170,3 +180,8 @@ function initComparisons() {
 
 
 initComparisons();
+
+
+
+
+

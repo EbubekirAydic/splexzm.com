@@ -1,7 +1,10 @@
 body {
     text-align: center;
-    background: linear-gradient(266deg, #38003c, #572e55);
+    background: linear-gradient(266deg, #38003c, #570052);
     overflow-x: hidden;
+}
+
+html{
 }
 
 :root{
@@ -12,12 +15,11 @@ body {
 
 
 .background {
-    position: absolute;
     width: 100vw;
-    height: 120vh;
-    background: url('../images/BackGroundImg.png') center/cover no-repeat;
+    height: 15lh;
+    background: url('../images/back-ground3.png') center/cover no-repeat;
+    filter: brightness(1);
     z-index: -1;
-    background-color: #000;
 }
 .background2 {
     position: absolute;
@@ -29,9 +31,6 @@ body {
 }
 
 .hero-mask {
-    --mask: conic-gradient(from -75deg at bottom, #ff0000, #ff0000 1deg 149deg, #ff000000 150deg) 50% / 50px 100%;
-    -webkit-mask: var(--mask);
-    mask: var(--mask);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
@@ -56,15 +55,14 @@ body {
 /* Resimler */
 
 header{
-    padding: 20px 0px 20px 0px;
     height: auto;
-    margin-bottom: 20px;
     background: linear-gradient(135deg, #530348, #2d0146);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.551);
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
     padding: 15px 25px;
+    width: 100%;
 }
 
 header .left{
@@ -90,7 +88,7 @@ header img{
     transition: width 0.5s;
 }
 header img:hover{
-    width: 26vh;
+    width: 25.2vh;
 }
 
 .menuBar{
@@ -121,8 +119,9 @@ header img:hover{
     overflow: hidden;
     position: fixed;
     top: 0;
-    transform: translateX(-200px);
+    transform: translateX(-240px);
     transition: transform 0.5s;
+    z-index: -991;
 }
 .menuS.on{
     transform: translateX(0px) !important;
@@ -554,9 +553,6 @@ tr:hover {
     h1{
         font-size: 24px  !important;
     }
-    p{
-        font-size: 15px  !important;
-    }
 }
 
 
@@ -681,10 +677,4 @@ tr:hover {
     h1{
         font-size: 24px  !important;
     }
-    p{
-        font-size: 14px  !important;
-    }
-
-
 }
-
